@@ -32,7 +32,7 @@ class TreatingRawData(object):
         # looking for the file config.ini:
         self.config.read('../../Control/Data/config.ini')
         
-        self.mem_key = self.config.get('Communication', 'no_player_robofei')*100;
+        self.mem_key = int(self.config.get('Communication', 'no_player_robofei'))*100
 
         #Instantiate the BlackBoard's class:
         self.bkb = SharedMemory()
